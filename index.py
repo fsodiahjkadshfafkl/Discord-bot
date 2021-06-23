@@ -1,5 +1,7 @@
 import discord
-token = "ODU3MzI5OTkwOTA3ODU0ODk4.YNOAxg.y2LAQbvTKWEd5dPxzejYlG7AHnA"
+import os
+
+token = "access_token"
 client = discord.Client()
 
 @client.event
@@ -7,4 +9,6 @@ async def on_ready():
     print("Bot ready")
     print(client.user)
 
+access_token = os.environ["BOT TOKEN"]    
+    
 client.run(token)
